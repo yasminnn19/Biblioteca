@@ -7,7 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('livros/', LivrosView.as_view(), name='livros'),
-    path('reserva/', EmprestimoView.as_view(), name='reserva'),
+    #path('reserva/', EmprestimoView.as_view(), name='reserva'),
     path('cidade/', CidadesView.as_view(), name='cidade'),
     path('autor/', AutoresView.as_view(), name='autor'),
     path('editor/', EditorasView.as_view(), name='editora'),

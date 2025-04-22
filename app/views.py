@@ -10,13 +10,13 @@ class LivrosView(View):
     def get(self, request, *args, **kwargs):
         livros = Livro.objects.all()
         return render(request, 'livros.html', {'livros': livros})
+    def post(self, request, *args, **kwargs):
+        pass
 
-    # def post(self, request, *args, **kwargs):
-
-class EmprestimoView(View):
-    def get(self, request, *args, **kwargs):
-        reservas = Emprestimo.objects.all()
-        return render(request, 'reserva.html', {'reservas': reservas})
+# class EmprestimoView(View):
+    #def get(self, request, *args, **kwargs):
+       # reservas = Emprestimo.objects.all()
+       # return render(request, 'reserva.html', {'reservas': reservas})
 
 class CidadesView(View):
     def get(self, request, *args, **kwargs):
@@ -42,3 +42,4 @@ class GenerosView(View):
     def get(self, request, *args, **kwargs):
         generos = Genero.objects.all()
         return render(request, 'genero.html', {'generos': generos})
+    
